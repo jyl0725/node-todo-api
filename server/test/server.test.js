@@ -100,3 +100,16 @@ describe('GET /Todos/:id', () => {
       .end(done)
   });
 });
+
+describe('Delete /Todos:id', () => {
+  it('should remove find and remove one todo', (done) => {
+    request(app)
+      .get(`/todos/${todos[0]._id.toString()}`)
+      .expect(200)
+      .expect( res => {
+        expect(res.body.todo.text).toBe(todos[0].text)
+      })
+      .expect(todos.length).toBe(1)
+      .end(done)
+  });
+});
