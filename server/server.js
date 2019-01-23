@@ -4,6 +4,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const {ObjectID} = require('mongodb');
 const _ = require('lodash');
+const cors = require('cors');
 
 let {mongoose} = require('./db/mongoose');
 let {Todo} = require('./models/Todo');
@@ -15,6 +16,7 @@ let app = express();
 const port = process.env.PORT || 3000
 
 app.use(bodyParser.json());
+app.use(cors())
 
 // authenticate user to post to user's todo list
 app.post('/todos',authenticate, (req, res) => {
