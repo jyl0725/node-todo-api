@@ -50,10 +50,13 @@ To retrieve 1 task send a get request to `https://kabanboard-node-api.herokuapp.
 
 7. Update task:
 To update a task to be completed/ or change task send a patch request to `https://kabanboard-node-api.herokuapp.com/todos/:id` with JWT("x-auth") in header
-![Patch Todos](https://github.com/jyl0725/node-todo-api/blob/master/asset/patch-todos.png)
+![Patch Todos](https://github.com/jyl0725/node-todo-api/blob/master/asset/patch-todogits.png)
 
 8. Delete task:
 To delete a task send a delete request to `https://kabanboard-node-api.herokuapp.com/todos/:id` with JWT("x-auth") in header.
+
+# Test
+  Functions are unit tested with Mocha(Testing framework), Expect(matcher from JEST), Supertest(HTTP request)
 
 # Future Development
 This application will be integrated with a React-Frontend.
