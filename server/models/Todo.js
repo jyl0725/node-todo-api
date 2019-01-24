@@ -1,6 +1,7 @@
 let mongoose = require('mongoose');
 
 let Todo = mongoose.model('Todo',{
+
   text: {
     type: String,
     required: true,
