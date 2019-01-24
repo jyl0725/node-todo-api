@@ -41,8 +41,8 @@ This will remove the JWT token store in the user's object in MongoDB database
 send a post request to `https://kabanboard-node-api.herokuapp.com/todos` with following information:
 with JWT in header
 
-![Post Todos](https://github.com/jyl0725/node-todo-api/blob/master/asset/post-tods.png)
-![Post Todos Response](https://github.com/jyl0725/node-todo-api/blob/master/asset/post-tods-response.png)
+![Post Todos](https://github.com/jyl0725/node-todo-api/blob/master/asset/post-todos.png)
+![Post Todos Response](https://github.com/jyl0725/node-todo-api/blob/master/asset/post-todos-response.png)
 
 6. Get tasks:
 To retrieve all  tasks send a get request to `https://kabanboard-node-api.herokuapp.com/todos` with JWT("x-auth") in header
@@ -50,7 +50,7 @@ To retrieve 1 task send a get request to `https://kabanboard-node-api.herokuapp.
 
 7. Update task:
 To update a task to be completed/ or change task send a patch request to `https://kabanboard-node-api.herokuapp.com/todos/:id` with JWT("x-auth") in header
-![Patch Todos](https://github.com/jyl0725/node-todo-api/blob/master/asset/patch-tods.png)
+![Patch Todos](https://github.com/jyl0725/node-todo-api/blob/master/asset/patch-todos.png)
 
 8. Delete task:
 To delete a task send a delete request to `https://kabanboard-node-api.herokuapp.com/todos/:id` with JWT("x-auth") in header.
