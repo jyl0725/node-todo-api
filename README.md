@@ -15,7 +15,7 @@ Currently the App can be used with Postman (will be integrated with a React Fron
 1. Create a new user:
 send a post request to `https://kabanboard-node-api.herokuapp.com/users`
 
-![Post User](https://github.com/jyl0725/node-node-todo-api/blob/master/blob/master/asset/post:user.png)
+![Post User](https://github.com/jyl0725/node-node-todo-api/blob/master/blob/asset/post:user.png)
 
 You will receive a JWT in the response header
 ![Post User](https://github.com/jyl0725/node-todo-api/blob/master/asset/x-auth.png)
