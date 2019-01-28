@@ -17,6 +17,7 @@ const port = process.env.PORT || 3000
 
 app.use(bodyParser.json());
 app.use(cors());
+app.options('/users', cors())
 
 // authenticate user to post to user's todo list
 app.post('/todos',authenticate, (req, res) => {
