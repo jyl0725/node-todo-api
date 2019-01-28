@@ -16,8 +16,10 @@ let app = express();
 const port = process.env.PORT || 3000
 
 app.use(bodyParser.json());
-app.use(cors());
-app.options('/users', cors())
+app.use(cors(corsOptions));
+const corsOptions = {
+  allowedHeaders: 'x-auth'
+}
 
 // authenticate user to post to user's todo list
 app.post('/todos',authenticate, (req, res) => {
