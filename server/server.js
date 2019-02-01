@@ -4,6 +4,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const {ObjectID} = require('mongodb');
 const _ = require('lodash');
+const cors = require('cors');
 
 let {mongoose} = require('./db/mongoose');
 let {Todo} = require('./models/Todo');
@@ -15,11 +16,9 @@ let app = express();
 const port = process.env.PORT || 3000
 
 app.use(bodyParser.json());
-app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "Origin, x-auth, Content-Type, Accept");
-  next();
-});
+app.use(cors({
+  exposedHeaders: ['x-auth'],
+}));
 
 // authenticate user to post to user's todo list
 app.post('/todos',authenticate, (req, res) => {
